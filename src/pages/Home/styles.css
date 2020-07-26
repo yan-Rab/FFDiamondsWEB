@@ -70,6 +70,8 @@
     background-color:rgb(180, 180, 240);
 }
 .main-home .actions .icons{
+    max-width: 80px;
+    min-width: 30px;
     width: 80px;
     height: 80px;
 }

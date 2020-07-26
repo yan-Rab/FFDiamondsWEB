@@ -2,7 +2,8 @@ import axios, { AxiosResponse, AxiosError } from 'axios';
 import Toasts from '../components/Toasts';
 import iconSuccess from '../assets/tick.png';
 import iconError from '../assets/error.png';
-const api = axios.create({baseURL: 'http://localhost:3001'})
+
+const api = axios.create({baseURL: process.env.REACT_APP_API_URL})
 
 const toasts = new Toasts();
 

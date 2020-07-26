@@ -1,0 +1,104 @@
+.header-home{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(225, 231, 247);
+    background: rgb(0,34,36);
+    background: linear-gradient(90deg, rgba(0,34,36,0.896796218487395) 0%, rgba(190,242,242,0.7511379551820728) 0%, rgba(0,212,255,0.9136029411764706) 99%);}
+
+.header-home .links{
+    display: flex;
+    width: 250px;
+    flex-wrap: wrap;
+    font-size: clamp(0.3rem, 0.4rem +1vw, 0.6rem +1vw);
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header-home .links a{
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+    font-family: 'Poppins',sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.main-home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-home #imgHome{
+    max-width: 400px ;
+    max-height: 350px;
+    min-width: 180px;
+    padding: 20px;
+    min-height: 180px;
+    margin-top: 40px;
+}
+
+.main-home .actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+.main-home .actions .buttonModal{
+    display: flex;
+    flex-direction: column;
+    background: none;
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+    height: 160px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins',sans-serif;
+    transition: all 0.3s;
+}
+
+.main-home .actions .buttonModal:active{
+    background-color:rgb(180, 180, 240);
+}
+.main-home .actions .icons{
+    width: 80px;
+    height: 80px;
+}
+
+
+.group-inputs{
+   
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.inputs{
+    margin: 10px 15px 15px 10px;
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    padding-left: 5px;
+    border: 1px solid rgb(199, 196, 196);
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s;
+    color: rgb(36, 36, 36);
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputs:focus{
+    background-color: rgb(213, 236, 247);
+    border-color: rgb(213, 236, 247);
+}

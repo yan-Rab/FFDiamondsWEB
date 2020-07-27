@@ -27,12 +27,12 @@ const Home = () => (
 
             <button type="button" className = 'buttonModal' data-toggle="modal" data-target="#RegisterClient">
                 <img className = 'icons' src= {iconClient} alt="icone cliente"/>
-                Cadastrar Clientes
+                <p style = {{marginTop: '10px'}}>Cadastrar Clientes</p>
             </button>
 
             <button type="button" className="buttonModal" data-toggle="modal" data-target="#RegisterSales">
                 <img src={iconSale} alt="icone venda" className = 'icons'/>
-                Registrar Venda
+                <p style = {{marginTop: '10px'}}>Registrar Venda</p>
             </button>
 
             <RegisterClient />

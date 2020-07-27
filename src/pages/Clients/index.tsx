@@ -45,6 +45,8 @@ const Clients = () => {
             return setClients(response.data)
         })
 
+        
+
     },[])
 
     async function handleSearch(event: ChangeEvent<HTMLInputElement>){
@@ -97,7 +99,7 @@ const Clients = () => {
                         <strong>UF</strong>
                     </div>
                     
-                    {clients.map(client => (
+                    {clients ? clients.map(client => (
                         <div className="clients-info" key = {client.id}>
 
                             <strong>{client.ff_id}</strong>
@@ -123,7 +125,7 @@ const Clients = () => {
                            
                             
                         </div>
-                    ))}
+                    )) : []}
                     
                 </section>
                 

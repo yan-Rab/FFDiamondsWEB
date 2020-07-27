@@ -49,7 +49,7 @@
     justify-content: space-between;
     align-items: center;
     width: 400px;
-    flex-wrap: wrap;
+  
 }
 
 .main-home .actions .buttonModal{
@@ -59,11 +59,12 @@
     padding: 20px;
     border-radius: 20px;
     outline: none;
-    height: 160px;
+    word-wrap: normal;
     justify-content: space-between;
     align-items: center;
     font-family: 'Poppins',sans-serif;
     transition: all 0.3s;
+    font-size: clamp(0.2em, 0.3em + 1vw, 0.6 +1vw);
 }
 
 .main-home .actions .buttonModal:active{
@@ -71,9 +72,9 @@
 }
 .main-home .actions .icons{
     max-width: 80px;
-    min-width: 30px;
-    width: 80px;
-    height: 80px;
+    min-width: 20px;
+    width: clamp(2em, 1em + 5vw, 2em+10vw);
+    height: clamp(2em, 1em + 5vw, 2em+10vw);
 }
 
 

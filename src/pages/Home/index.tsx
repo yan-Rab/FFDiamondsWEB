@@ -7,6 +7,8 @@ import RegisterClient from '../../components/modals/RegisterClient';
 import RegisterSales from '../../components/modals/RegisterSales';
 import iconClient from '../../assets/add.png'
 import iconSale from '../../assets/discount.png';
+import 'react-toastify/dist/ReactToastify.css'
+import {ToastContainer} from 'react-toastify';
 
 const Home = () => (
     <div>
@@ -39,6 +41,7 @@ const Home = () => (
             <RegisterSales />
             </section>
         </main>
+        <ToastContainer limit = {1} className = 'toast-container' />
     </div>
 )
 

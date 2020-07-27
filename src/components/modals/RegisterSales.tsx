@@ -37,7 +37,7 @@ const RegisterSales = () => {
             const {content,obs,payment,value} = dataSale
             await api.post('/sale', 
             {
-                id_client: client.data.id,
+                id_client: client.data,
                 content, value, obs, payment
             })
 

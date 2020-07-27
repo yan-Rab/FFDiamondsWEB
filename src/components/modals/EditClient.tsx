@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 interface Props{
     client: {
-        id: number,
+        _id: string,
         ff_id: string,
         nickname: string,
         name: string,
@@ -31,7 +31,7 @@ const EditClient: React.FC<Props> = ({client}) => {
     const [cities, setCities] = useState<String[]>([])
 
     const [dataClient, setDataClient] = useState({
-        id: NaN,
+        _id: '',
         name: '',
         nickname: '',
         telephone: '',
@@ -92,8 +92,9 @@ const EditClient: React.FC<Props> = ({client}) => {
         try{
 
             await api.put('/clients', {
+            
              uf,
-             id: client.id,
+             _id: client._id,
              name: dataClient.name,
              nickname: dataClient.nickname,
              ff_id: dataClient.ff_id,

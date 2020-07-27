@@ -20,9 +20,7 @@ export default class Toasts {
             className: 'toast-success',
             closeButton: true,
             draggable: true,
-            hideProgressBar: false,
-            pauseOnHover: false,
-            autoClose: 2500,
+            autoClose: 2000,
             closeOnClick: true,
         })
     }
@@ -32,10 +30,9 @@ export default class Toasts {
             position: 'bottom-right',
             className: 'toast-error',
             closeButton: true,
-            autoClose: 3000,
+            autoClose: 2200,
             draggable: true,
             closeOnClick: true,
-            pauseOnHover: false,
             hideProgressBar:false,
 
         })

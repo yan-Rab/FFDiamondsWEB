@@ -1,8 +1,7 @@
 import React, {useState, useEffect, ChangeEvent, FormEvent} from 'react';
 import axios from 'axios';
 import iconClose from '../../assets/back.png';
-import 'react-toastify/dist/ReactToastify.css'
-import {ToastContainer} from 'react-toastify';
+
 import api from '../../services/api';
 
 interface IBGEUF{
@@ -123,7 +122,7 @@ const RegisterClient = () => {
         
     </div>
     </div>
-    <ToastContainer limit = {1} className = 'toast-container' />
+    
     </div>
     )
 }

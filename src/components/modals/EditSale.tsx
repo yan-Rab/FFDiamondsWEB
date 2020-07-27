@@ -6,8 +6,8 @@ import {ToastContainer} from 'react-toastify';
 
 interface Props{
     sale: {
-        id: number,
-        id_client: number,
+        _id: string,
+        id_client: string,
         ff_id: string,
         name: string,
         content: string,
@@ -20,11 +20,11 @@ interface Props{
 const EditSale: React.FC<Props> = ({sale}) => {
 
     const [dataSale, setDataSale] = useState({
-        id: NaN,
+        _id: '',
         ff_id: '',
-        id_client: NaN,
+        id_client: '',
         name: '',
-        value: NaN,
+        value: 0,
         payment: '',
         content: '',
         obs: ''
@@ -50,15 +50,16 @@ const EditSale: React.FC<Props> = ({sale}) => {
 
     async function registerSale(event: FormEvent){
        event.preventDefault();
-
+    
         try{
             const client = await api.get(`/client/${dataSale.ff_id}`)
             
             const {content,obs,payment,value} = dataSale
+            
             await api.put('/sales', 
             {
-                id: sale.id,
-                id_client: client.data.id,
+                _id: sale._id,
+                id_client: client.data,
                 content, value, obs, payment
             })
 

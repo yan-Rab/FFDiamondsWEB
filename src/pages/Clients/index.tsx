@@ -2,7 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 
 import {Link} from 'react-router-dom';
 import logo from '../../assets/logo.png';
-import {BsBoxArrowInLeft, BsJustify} from 'react-icons/bs';
+import {BsBoxArrowInLeft} from 'react-icons/bs';
 import {FiEdit} from 'react-icons/fi';
 import api from '../../services/api';
 import {DebounceInput} from 'react-debounce-input';
@@ -12,7 +12,7 @@ import {ToastContainer} from 'react-toastify';
 import './styles.css';
 
 interface Clients{
-    id: number,
+    _id: string,
     name: string,
     ff_id: string,
     nickname: string,
@@ -26,7 +26,7 @@ interface Clients{
 const Clients = () => {
     const [clients, setClients] = useState<Clients[]>([])
     const [editClient,setEditclient] = useState({
-        id: NaN,
+        _id: '',
         name: '',
         ff_id: '',
         nickname: '',
@@ -100,7 +100,7 @@ const Clients = () => {
                     </div>
                     
                     {clients ? clients.map(client => (
-                        <div className="clients-info" key = {client.id}>
+                        <div className="clients-info" key = {client._id}>
 
                             <strong>{client.ff_id}</strong>
                             

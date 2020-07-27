@@ -13,8 +13,8 @@ import iconSale from '../../assets/discount.png';
 import './styles.css'
 
 interface SalesTable{
-    id: number
-    id_client: number,
+    _id: string,
+    id_client: string,
     ff_id: string,
     name: string,
     content: string,
@@ -23,31 +23,71 @@ interface SalesTable{
     obs: string
 }
 
-
+interface SalesResponse{
+    _id: string,
+    id_client: string,
+    client: {
+        
+        ff_id: string,
+        name: string,
+    }[],
+    content: string,
+    value: number,
+    payment: string,
+    obs: string
+}
 
 const Sales = () => {
     const [sales,setSales] = useState<SalesTable[]>([])
     const [editSales, setEditSales] = useState({
-            id: NaN,
-            id_client: NaN,
+            _id: '',
+            id_client: '',
             ff_id: '',
             name: '',
             content: '',
-            value: NaN,
+            value: 0,
             payment: '',
             obs: ''
     })
 
     useEffect(() => {
-        api.get('/sales').then(response => {
-            setSales(response.data)
+        api.get<SalesResponse[]>('/sales').then(response => {
+
+            const salesArray = response.data.map(sale => {
+                const {content, _id, payment,obs,value,id_client} = sale
+                const dataClient = sale.client[0]
+                const {ff_id,name} = dataClient
+                
+                return {
+                    content, _id, payment,obs,value,
+                    id_client,
+                    ff_id,
+                    name
+                }
+            })
+            setSales(salesArray)
         })
     },[])
 
     async function handleSearch(event: ChangeEvent<HTMLInputElement>){
         const search = event.target.value;
-        const searchSales = await api.get(`/searchSales?search=${search}`)
-        setSales(searchSales.data)
+        api.get<SalesResponse[]>(`/searchSales?search=${search}`).then(response => {
+            const salesArray = response.data.map(sale => {
+                const {content, _id, payment,obs,value,id_client} = sale
+                const dataClient = sale.client[0]
+                const {ff_id,name} = dataClient
+                
+                return {
+                    content, _id, payment,obs,value,
+                    id_client,
+                    ff_id,
+                    name
+                }
+            })
+
+            setSales(salesArray)
+        })
+       
     }
 
     function handleValuesEditSale(sale: SalesTable){
@@ -99,10 +139,8 @@ const Sales = () => {
                     </div>
 
                     {sales.map(sale => (
-                        <div className="sales-info" key = {sale.id}>
+                        <div className="sales-info" key = {sale._id}>
                             
-                            
-
                             <strong>{sale.ff_id}</strong>
                             
                             <strong>{sale.name}</strong>
@@ -133,6 +171,7 @@ const Sales = () => {
                 </section>
             </main>
             <ToastContainer limit = {1} className = 'toast-container' />
+            
             <EditSales sale = {editSales} />
         </div>
     )

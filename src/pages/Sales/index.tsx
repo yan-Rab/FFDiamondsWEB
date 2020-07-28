@@ -138,7 +138,7 @@ const Sales = () => {
                         
                     </div>
 
-                    {sales.map(sale => (
+                    {sales ? sales.map(sale => (
                         <div className="sales-info" key = {sale._id}>
                             
                             <strong>{sale.ff_id}</strong>
@@ -165,7 +165,7 @@ const Sales = () => {
                            
                             
                         </div>
-                    ))}
+                    )) : []}
                     
                     
                 </section>

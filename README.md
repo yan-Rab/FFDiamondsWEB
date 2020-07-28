@@ -14,7 +14,12 @@
 <p>- Typescript</p>
 
 <h3>Para mais informações sobre as funcionalidades da <br>aplicação, acesse o repositório que contém a API da mesma. #FFDiamondsAPI</h3>
+<br>
 
+<strong>
+Algumas funcionalidades como edição de clientes e listagem não podem ser mostradas por imagem. 
+Por isso, fique atento ao meu linkedin, logo logo postarei um vídeo com tudo funcionando.
+</strong>
 <img src = 'src/assets/clientsdiamonds.png' width = '1080px' height = '560px' />
 
 <img src = 'src/assets/salesdiamonds.png' width = '1080px' height = '560px' />

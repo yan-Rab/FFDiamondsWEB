@@ -17,9 +17,11 @@ api.interceptors.response.use(
     },
 
     function (err: AxiosError){
-        const {message} = err.response?.data
-
-        return toasts.error(iconError, message)
+      
+        if(err.response?.data.message){
+            toasts.error(iconError, err.response?.data.message)
+        }
+        return err
     }
 )
 

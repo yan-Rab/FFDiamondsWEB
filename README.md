@@ -1,4 +1,7 @@
-<h2>Aplicação web feita para gerenciamento e <br>organização de clientes e vendas de uma lojinha virtual</h2>
+<h2>FFDIAMONDS</h2>
+
+<strong>Sobre</strong>
+<p>Aplicação web feita para gerenciamento e <br>organização de clientes e vendas de uma lojinha virtual</p>
 
 <img src = 'src/assets/homeDiamonds.png' width = '1080px' height = '560px' />
 

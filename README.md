@@ -17,9 +17,11 @@
 <br>
 
 <strong>
-Algumas funcionalidades como edição de clientes e listagem não podem ser mostradas por imagem. 
-Por isso, fique atento ao meu linkedin, logo logo postarei um vídeo com tudo funcionando.
+Algumas funcionalidades como edição de clientes e listagem não podem ser mostradas por imagem.<br>
+Por isso, fique atento ao meu linkedin [https://www.linkedin.com/in/yan-rabelo-964b891a5/], logo logo postarei um vídeo com tudo funcionando.
 </strong>
+
+<br>
 <img src = 'src/assets/clientsdiamonds.png' width = '1080px' height = '560px' />
 
 <img src = 'src/assets/salesdiamonds.png' width = '1080px' height = '560px' />

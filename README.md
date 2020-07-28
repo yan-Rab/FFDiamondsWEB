@@ -16,10 +16,10 @@
 <h3>Para mais informações sobre as funcionalidades da <br>aplicação, acesse o repositório que contém a API da mesma. #FFDiamondsAPI</h3>
 <br>
 
-<strong>
+<p>
 Algumas funcionalidades como edição de clientes e listagem não podem ser mostradas por imagem.<br>
-Por isso, fique atento ao meu linkedin [https://www.linkedin.com/in/yan-rabelo-964b891a5/], <br> logo logo postarei um vídeo com tudo funcionando.
-</strong>
+Por isso, fique atento ao meu linkedin https://www.linkedin.com/in/yan-rabelo-964b891a5/, <br> logo logo postarei um vídeo com tudo funcionando.
+</p>
 
 <img src = 'src/assets/clientsdiamonds.png' width = '1080px' height = '560px' style = "margin-top:'15px';" />
 

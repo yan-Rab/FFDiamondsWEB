@@ -3,7 +3,7 @@
 <strong>Sobre</strong>
 <p>Aplicação web feita para gerenciamento e organização de clientes e vendas de uma lojinha virtual</p>
 
-<img src = 'src/assets/homeDiamonds.png' width = '1080px' height = '560px' />
+<img src = 'src/assets/homeDiamonds.png' width = '80%' height = '45%' />
 
 <h2>Projeto Freelancer</h2>
 

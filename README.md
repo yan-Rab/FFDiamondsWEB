@@ -13,7 +13,7 @@
 <p>- React</p>
 <p>- Typescript</p>
 
-<h3>Para mais informações sobre as funcionalidades da <br>aplicação, acesse o repositório que contém a API da mesma. #FFDiamondsAPI</h3>
+<h4>Para mais informações sobre as funcionalidades da <br>aplicação, acesse o repositório que contém a API da mesma. #FFDiamondsAPI</h4>
 <br>
 
 <p>

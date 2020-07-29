@@ -21,6 +21,6 @@ Algumas funcionalidades como edição de clientes e listagem não podem ser most
 Por isso, fique atento ao meu linkedin https://www.linkedin.com/in/yan-rabelo-964b891a5/, <br> logo logo postarei um vídeo com tudo funcionando.
 </p>
 
-<img src = 'src/assets/clientsdiamonds.png' width = '1080px' height = '560px' style = "margin-top:'15px';" />
+<img src = 'src/assets/clientsdiamonds.png' width = '80%' height = '45%' style = "margin-top:'15px';" />
 
-<img src = 'src/assets/salesdiamonds.png' width = '1080px' height = '560px' />
+<img src = 'src/assets/salesdiamonds.png' width = '80%' height = '45%' />

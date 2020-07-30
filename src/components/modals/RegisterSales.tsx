@@ -6,7 +6,7 @@ import {ToastContainer} from 'react-toastify';
 const RegisterSales = () => {
 
     const [dataSale, setDataSale] = useState({
-        value: '',
+        value: 0,
         payment: '',
         content: '',
         obs: ''
@@ -73,8 +73,8 @@ const RegisterSales = () => {
 
             <div className="group-inputs">
                 <input  onChange = {handleInputsDataSale}
-                className = 'inputs' type="number" name="value" id="value" 
-                placeholder = 'Valor R$' required/>
+                className = 'inputs' type="text" name="value" id="value" 
+                placeholder = 'Valor R$' required />
 
                 <select onChange = {handleSelectDataSale} 
                 className = 'inputs' name="payment" id="payment">

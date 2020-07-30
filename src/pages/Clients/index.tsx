@@ -119,6 +119,7 @@ const Clients = () => {
                                 type="button" className = 'buttonModal' data-toggle="modal" data-target="#EditClient">
 
                                     <FiEdit id = 'editIcon' style = {{width : '1.3em', height: '1.3em'}} color = 'rgb(80, 154, 238)' />
+                                    
                                 </button>
                             </strong>
                             
@@ -126,6 +127,9 @@ const Clients = () => {
                             
                         </div>
                     )) : []}
+
+                    
+                    
                     
                 </section>
                 

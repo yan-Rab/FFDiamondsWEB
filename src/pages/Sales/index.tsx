@@ -7,9 +7,10 @@ import {FiEdit} from 'react-icons/fi';
 import api from '../../services/api';
 import {DebounceInput} from 'react-debounce-input';
 import EditSales from '../../components/modals/EditSale';
-
+import {MdDelete} from 'react-icons/md';
 import {ToastContainer} from 'react-toastify';
 import iconSale from '../../assets/discount.png';
+import DestroySale from '../../components/modals/DestroySale';
 import './styles.css'
 
 interface SalesTable{
@@ -49,6 +50,8 @@ const Sales = () => {
             payment: '',
             obs: ''
     })
+
+    const [deleteSale, setDeleteSale] = useState('')
 
     useEffect(() => {
         api.get<SalesResponse[]>('/sales').then(response => {
@@ -135,6 +138,7 @@ const Sales = () => {
                         
                         <strong>Pagamento</strong>
                         <strong>Valor</strong>
+                        <strong>Ações</strong>
                         
                     </div>
 
@@ -154,15 +158,24 @@ const Sales = () => {
                             
                             <strong>{sale.value.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>
                           
+                            <strong style = {{flexWrap: 'nowrap', justifyContent: 'center'}}>
 
+                           
                             <button onClick = {() => {handleValuesEditSale(sale)} }
                                 style = {{outline: 'none', background: 'none', marginRight:'8px'}}
                                 type="button" className = 'buttonModal' data-toggle="modal" data-target="#EditSales">
 
-                                    <FiEdit id = 'editIcon' style = {{width : '1em', height: '1em'}} color = 'rgba(250, 139, 157, 0.918)' />
+                                    <FiEdit id = 'editIcon' style = {{width : '1.4em', height: '1.4em'}} color = 'rgba(250, 139, 157, 0.918)' />
                             </button>
-                            
-                           
+
+                            <button onClick = {() => setDeleteSale(sale._id) }
+                                style = {{outline: 'none', background: 'none', marginRight:'8px'}}
+                                type="button" className = 'buttonModal' data-toggle="modal" data-target="#DestroySale">
+                                <MdDelete id = 'editIcon' style = {{width : '1.4em', height: '1.4em'}} color = 'rgba(250, 139, 157, 0.918)'/>
+
+                            </button>
+
+                            </strong>
                             
                         </div>
                     )) : []}
@@ -173,6 +186,7 @@ const Sales = () => {
             <ToastContainer limit = {1} className = 'toast-container' />
             
             <EditSales sale = {editSales} />
+            <DestroySale _id = {deleteSale} />
         </div>
     )
 }
